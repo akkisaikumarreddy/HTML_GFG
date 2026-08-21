@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>SVG Elements</title>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>SVG <u style="color: brown; font-size: 40px;font-weight: bold;">&lt;a&gt;</u> Element</h1>
+        <h2>
+            <details>
+                <summary>Syntax :</summary>
+                <p  style="padding: 10px; font-size: 20px; font-weight: bold;">&lt;a href=""   <br>
+                    target=""      <br>
+                    type=""        <br>
+                    rel=""         <br>
+                    download=""&gt;<br>
+                 &lt;/a&gt;        
+                </p>
+                <br>
+                <ul>
+                    <li><u>href</u>:- It stands for hypertext reference and takes the link to the other documents. </li>
+                    <li><u>download</u>:- It instructs the browser to download a file.</li>
+                    <li><u>hreflang</u>:- It is the human language of the URL or in simple words the URL fragment that hyperlink point is the hreflang.</li>
+                    <li><u>rel</u>:- It tells the relationship between the target and source documents.</li>
+                    <li><u>target</u>:- It tells about where the webpage is to be displayed.</li>
+                 </ul>
+                 </details>
+        </h2>
+
+        <h3>SVG  &lt;a&gt; Tag</h3>
+        <svg width="200" height="180">
+            <a href="https://www.geeksforgeeks.org/svg-a-element/?ref=next_article">
+                <circle cx="100" cy="80" r="50" fill="green" stroke-width="2px" />
+            </a>
+        </svg>
+        <br>
+        <svg width="200" height="180">
+            <a href="https://www.geeksforgeeks.org/svg-a-element/?ref=next_article">
+                <circle cx="100" cy="80" r="50" fill="indianred" stroke-width="2px" target="_blank" />
+            </a>
+        </svg>
+
+        <br>
+        <hr>
+
+        <h1>SVG <u style="color: brown; font-size: 40px;font-weight: bold;">&lt;animate&gt;</u> Element</h1>
+        <h2>
+            <details>
+                <summary>Syntax :</summary>
+                <p  style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    &lt;animate  attributeName=""   values=""   dur=""   repeatCount="" /&gt; <br>
+                </p>
+                <br>
+                <p>The &lt;animate&gt; SVG element is used to animate an attribute or property of an element over time. It’s normally inserted inside the element which we want to animate.</p>
+            </details>
+        </h2>
+        <svg width="200" height="200" viewBox="0 0 50 50">
+            <rect width="40" height="30" fill="green">
+                <animate attributeName="rx" values="0;20;0"
+                    dur="2s" repeatCount="10" />
+                </rect>
+        </svg>
+        <ul>
+            <li><u>&lt;svg viewBox="0 0 50 50"&gt;</u>: Defines an SVG (Scalable Vector Graphics) container with a view box of 50x50 units. This element creates an area where the SVG graphics will be drawn.</li>
+            <ul>
+                <li>The viewBox is an attribute of the SVG element in HTML. It is used to scale the SVG element that means we can set the coordinates as well as width and height. </li>
+                <li><u style="color: blue; font-size: 20px;font-weight: bold;">Syntax</u>:viewBox = "min-x min-y width height"</li>
+                <li>min-x  is used to set the horizontal axis. It is used to make the SVG move on a horizontal axis (i.e Left and Right).</li>
+                <li>min-y  is used to set the vertical axis. It is used to make the SVG move on a vertical axis (i.e Up and Down).</li>
+                <li>width  is used to set the width of viewbox.</li>
+                <li>height  is used to set the height of viewbox</li>
+            </ul>
+            <li><u>&lt;rect width="10" height="10" fill="green"&gt;</u>: This creates a rectangle with a width and height of 10 units, filled with the color green.</li>
+            <li>
+                &lt;animate attributeName="rx" values="0;20;0" dur="2s" repeatCount="10" /&gt;: This tag animates the rectangle by altering its rx attribute
+                <ul>
+                    <li><u>attributeName="rx"</u>: Specifies the attribute to animate, in this case, rx (corner radius of the rectangle).</li>
+                    <li><u>values="0;20;0"</u>: Defines the animation values in a sequence (from 0 to 20 and back to 0).</li>
+                    <li><u>dur="2s"</u>: Specifies the duration of the animation (2 seconds).</li>
+                    <li><u>repeatCount="10"</u>: Defines how many times the animation should repeat (10 times).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <svg width="200" height="200" viewBox="0 0 50 50">
+            <rect width="25" height="25" fill="green">
+                <animate attributeType="css"  attributeName="opacity"  from="1" to="0" dur="5s" repeatCount="indefinate"/>
+            </rect>
+        </svg>
+
+        <ul>
+            <li>attributeName="opacity": The attribute to animate is the opacity of the rectangle.</li>
+            <li>from="1": The animation starts with an opacity of 1 (fully opaque).</li>
+            <li>to="0": The animation transitions to an opacity of 0 (fully transparent).</li>
+        </ul>
+
+
+        <br>
+        <hr>
+
+
+        <h1>SVG <u style="color: brown; font-size: 40px;font-weight: bold;">&lt;animateMotion&gt;</u> Element</h1>
+        <h2>
+            <details>
+                <summary><u>Syntax :</u></summary>
+                <p  style="padding: 10px; font-size: 20px; font-weight: bold;">
+                    &lt;animateMotion values=""  dur=""  repeatCount=""  path="" /&gt; <br>
+                </p>
+                <br>
+                <p>The  SVG &lt;animateMotion&gt; element  let define how an element moves along a motion path.</p>
+            </details>
+        </h2>
+        <svg width="800" height="800">
+            <circle cx="60" cy="60" r="10" fill="red">
+                <animateMotion dur="12s" repeatCount="indefinite" path="M20, 60          
+                                                                        C20, -50 180, 150 180,  70 
+                                                                        C180-60 20, 150 20, 70 
+                                                                        z" />
+            </circle>
+        </svg>  
+        <ul>
+            <li>
+                path="M20, 60 C20, -50 180, 150 180, 60 C180-60 20, 150 20, 60 z": Defines the path for the animation using a series of commands:
+                <ul>
+                    <li>M20, 60 : Move to the starting point (20, 60)</li>
+                    <li>C20, -50 180, 150 180, 70 : Create a cubic Bézier curve from (20, 70) to (180, 60) with control points (20, -50) and (180, 150).</li>
+                    <li>C180-60 20, 150 20, 70 : Another cubic Bézier curve from (180, 70) to (20, 60) with control points (180, -60) and (20, 150).</li>
+                    <li>z: Close the path, returning to the starting point (20, 60).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <br>
+        <hr>
+
+
+        <h1>SVG <u style="color: brown; font-size: 40px;font-weight: bold;">&lt;animateTransform&gt;</u> Element</h1>
+        <h2>
+            <details>
+                <summary><u>Syntax :</u></summary>
+                <p style="padding: 10px;     font-size: 20px; font-weight: bold;">&lt;animateTransform attributeName=''transform''/&gt;</p>
+
+                <ul>
+                    <li>
+                        The animateTransform element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing
+                        <ul>
+                            <li>from: Initial value of the attribute that will be modified during the animation.</li>
+                            <li>to: Final value of the attribute that will be modified during the animation.</li>
+                            <li>type: It defines the type of transformation, whose values change over time.</li>
+                            <li>dur: Duration of the animation.</li>   
+                            <li>repeatCount: The number of times an animation will take place.</li>
+                            <li>repeatDur: The total duration for repeating an animation.</li>
+                            <li>attributeName: The name of the CSS property that is going to be animated.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>     
+        </h2>
+
+        <svg width="150" height="150">
+            <polygon points="60,30 90,90 30,90">
+                <animateTransform attributeName="transform" attributeType="XML"  type="rotate" from="0 60 70" to="360 60 70" dur="10s" repeatCount="indefinite"/>
+            </polygon>
+        </svg>
+
+        <ul>
+            <li>&lt;polygon points="60,30 90,90 30,90"&gt;: This creates a polygon (triangle) with the vertices at points (60,30), (90,90), and (30,90). This defines a shape with three sides.</li>
+            <li>attributeName="transform": Specifies that the attribute being animated is the transform attribute.</li>
+            <li>attributeType="XML": Indicates that the attribute is part of the XML namespace.</li>
+            <li>type="rotate": Specifies the type of transformation, which is a rotation.</li>
+            <li>from="0 60 70": The animation starts with the polygon at 0 degrees rotation, with the rotation axis at (60, 70).</li>
+            <li>to="360 60 70": The animation rotates the polygon to 360 degrees, with the same rotation axis at (60, 70).</li>
+            <li>dur="10s": Specifies the duration of the animation (10 seconds).</li>
+            <li>repeatCount="indefinite": Specifies that the animation should repeat indefinitely.</li>
+        </ul>
+
+    </body>
+</html>
+   

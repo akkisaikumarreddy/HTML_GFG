@@ -1,0 +1,356 @@
+
+<html>
+    <head>
+        <title>
+            HTML Forms
+        </title>
+        <style>
+  
+        </style>
+    </head>
+    <body>
+        <details>
+            <summary style="color: crimson;font-size: 30px;">HTML Forms</summary>
+            <p>
+                HTML Forms use the form tag to collect user input through various interactive controls. These controls range from text fields, numeric inputs, and email fields to password fields, checkboxes, radio buttons, and submit buttons.
+                <h1>Form Elements</h1>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/html-label-tag/" target="_blank"><u>label</u></a> :- It defines labels for form elements.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-input-tag/" target="_blank"><u>input</u></a> :- It is used to get input data from the form in various types such as text, password, email, etc by changing its type.</li>
+                    <li><a href="https://www.geeksforgeeks.org/button-tag-vs-input-typebutton-attribute/" target="_blank"><u>button</u></a> :- It defines a clickable button to control other elements or execute a functionality.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-select-tag/" target="_blank"><u>select</u></a> :- It is used to create a drop-down list.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-textarea-name-attribute/" target="_blank"><u>textarea</u></a> :- It is used to get input long text content.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-fieldset-form-attribute/" target="_blank"><u>fieldset</u></a> :- It is used to draw a box around other form elements and group the related data.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-legend-tag/" target="_blank"><u>legend</u></a> :- It defines a caption for fieldset elements.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-datalist-tag/" target="_blank"><u>datalist</u></a> :- It is used to specify pre-defined list options for input controls.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-output-tag/" target="_blank"><u>output</u></a> :- It displays the output of performed calculations.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-option-tag/" target="_blank"><u>option</u></a> :- It is used to define options in a drop-down list.</li>
+                    <li><a href="https://www.geeksforgeeks.org/html-optgroup-tag/" target="_blank"><u>optgroup</u></a> :- It is used to define group-related options in a drop-down list.</li>
+                </ul>
+            </p>
+        </details>
+        <br>
+        <hr>
+
+        <h1>Basic HTML Form</h1>
+        <form>
+            <label for="Username">Username:</label><br>
+            <input type="text" id="Username" name="Username"><br>  
+
+            <label for="password">password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <input type="submit" value="submit">
+
+        </form>
+
+        <br>
+        <hr>
+
+        <h1>HTML <u style="font-style: italic;">Label</u> Tag</h1>
+        <form>
+
+            <!-- label tag starts from here -->
+             <label for="student">student</label>
+             <input type="radio" id="student" name="occupation" value="student"><br><br>
+
+             <label for="bussiness">bussiness</label>
+             <input type="radio" id="bussiness" name="occupation" value="bussiness"><br><br>
+
+             <label for="password">password:</label><br>
+             <input type="password" id="password" name="password"><br><br>
+
+             <label for="other">other</label>
+             <input type="radio" id="other" name="occupation" value="other">
+        </form>
+
+        <br>
+        <hr>
+
+
+
+        <h1>HTML <u style="font-style: italic;">Button</u> Tag</h1>
+        <script> 
+            function msg() { 
+                alert("values submitted"); 
+            } 
+        </script>
+
+        <style>
+            .akki{
+                text-align: center;
+            }
+        </style>
+
+        <h1 style="color: green;" class="akki">GeeksforGeeks</h1>
+        <h2 class="akki">Using Input type</h2>
+        <form class="akki">
+            <label for="submit">Enter Value</label>
+            <input type="text">
+            <input type="button" id="submit"  onclick="msg()" value="button">
+        </form>
+
+
+        <h1 style="color: fuchsia;" class="akki">YonoSBI</h1>
+        <h2 class="akki">The Button Element</h2>
+        <form class="akki">
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Username" name="uname"> <br> <br>
+
+            <label for="password">password</label>
+            <input type="password" placeholder="password" name="password"> <br><br>
+
+            <button type="submit">
+                <img src="https://www.freeiconspng.com/uploads/login-button-png-4.jpg" width="100" height="45">
+            </button> 
+
+            <br><br>
+
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="password">Forget <a href="#">password</a></span>
+
+        </form>
+
+
+        <br>
+        <hr>
+
+
+        <h1>HTML <u style="font-style: italic;">Select</u> Tag</h1>
+        <h3>Basic Dropdown Menu</h3>
+
+
+        <form>
+            <label for="fruits">choose a fruit :</label>
+
+            <select id="fruits" name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="mango">Mango</option>
+                <option value="pineapple">Pineapple</option>
+            </select>
+        </form>
+        <br>
+
+        <h3>Styled Dropdown Menu</h3>
+
+        <style>
+            .sai{
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+            .kumar{
+                width: 150px;
+                padding: 5px;
+                border: 2px solid red;
+                border-radius: 4px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+            }
+        </style>
+
+        <form>
+            <label for="cars" class="sai">select a car brand</label>  
+            <select id="cars" name="cars" class="kumar">
+                <option value="volvo">volvo</option>
+                <option value="audi">audi</option>
+                <option value="tata">tata</option>
+                <option value="BMW">BMW</option>
+            </select>
+        </form>  
+        <br>
+
+        <h3>Dropdown Menu with Placeholder</h3>
+
+        <style>
+            .reddy{
+                width: 200px;
+                padding: 6px;
+                border: 1px solid #888;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                font-family: Verdana, sans-serif;
+                font-size: 13px;
+            }
+            option[disabled]{ color: grey;}
+        </style>
+
+        <form>
+            <label for="fruits">Choose a Fruit :</label>
+            <select id="fruits" name="fruits" class="reddy">
+                <option value="" disabled selected>select a fruit</option>
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="mango">Mango</option>
+                <option value="pineapple">Pineapple</option>
+            </select>
+        </form>
+
+        <br>
+        <hr>
+
+
+        <h1>HTML <u style="font-style: italic;">Textarea</u> Tag</h1>
+        <h3>Textarea example</h3>
+        <p>please enter your comments</p>
+        <textarea name="usercomments" rows="7" cols="100">Enter tour text here</textarea>
+
+
+        <br>
+        <hr>
+
+
+        <h1>HTML <u style="font-style: italic;">Fieldset</u> and <u>Legend</u> Tag</h1>
+        
+        <style>
+            fieldset{
+                width: 50%;
+                margin-left: 25%;
+            }
+        </style>
+        <h2 class="akki" style="color: green;font-size: 35px;">GeeksforGeeks</h2>
+        <h3 class="akki">HTML &lt;Fieldset&gt; and &lt;Legend&gt; form attribute (with out label tag)</h3>
+
+        <form id="mygeeks">
+            <div class="akki">suggest article for window</div>
+        </form>
+
+        <fieldset form="mygeeks">
+            <legend>JAVA :</legend>
+            Title:
+            <input type="text"><br>
+            Link: 
+            <input type="text"><br>
+            User ID:
+            <input type="text">
+        </fieldset>
+
+        <br>
+
+        <fieldset form="mygeeks">
+            <legend>PYTHON</legend>
+            Title:
+            <input type="text"><br>
+            Link: 
+            <input type="text"><br>
+            User ID:
+            <input type="text">
+        </fieldset>
+
+
+        <h3>fieldset with styled legend tag (with label tag)</h3>
+        <style>
+            .askr{
+                display: block;
+                padding-left: 10px;
+                padding-right: 10px;
+                border: 3px solid green;
+                background-color: tomato;
+                color: white;
+
+            }
+ 
+            .saiku{  
+                display: inline-block;
+                clear: left;
+                width: 190px;
+                margin: 5px;
+                text-align: left;
+            }
+        </style>
+        <div style="color: green;font-size: 40px;font-weight: bold;">GeeksforGeeks</div>
+        <h2>Html Styled Legend Tag</h2>
+        <form width="50%">
+            <fieldset>
+                <legend class="askr">STUDENT</legend>
+                <label class="saiku">Name:</label><br>
+                <input type="text" style="width: 350px; margin: 5px 0px;"><br>
+                <label class="saiku">Email:</label><br>
+                <input type="text" style="width: 350px; margin: 5px 0px;"><br>
+                <label class="saiku">Date Of Birth:</label><br>
+                <input type="text" style="width: 350px; margin: 5px 0px;"><br>
+                <label class="saiku">Address:</label><br>
+                <input type="text" style="width: 350px; margin: 5px 0px;"><br>
+                <label class="saiku">Enroll No:</label><br>
+                <input type="text" style="width: 350px; margin: 5px 0px;">
+            </fieldset>
+        </form>
+
+        <br>  
+        <hr>
+
+ 
+        <h1>HTML <u style="font-style: italic;">Datalist</u> Tag</h1>
+
+        <form action="">
+            <label>Your Cars Name:</label>
+            <input list="cars">
+            <datalist id="cars">
+                <option value="BMW">BMW</option>
+                <option value="volvo">volvo</option>
+                <option value="audi">audi</option>
+                <option value="tata">tata</option>
+
+            </datalist>
+        </form>
+
+        <br>
+        <hr>
+
+        <h1>HTML <u style="font-style: italic;">Output</u> Tag</h1>
+
+        <div style="color: green;font-size: 40px;font-weight: bold;" class="akki">GeeksforGeeks</div>
+        <h2 class="akki">Html Output Tag</h2>
+        <form oninput="sumresult.value = parseInt(A.value) + parseInt(B.value) + parseInt(C.value)" class="akki">
+            <input type="number" name="A" value="50"/>
+            +
+            <input type="range" name="B" value="0"/>
+            +
+            <input type="number" name="C" value="30"/>
+            <br>
+
+            result:<output name="sumresult"></output>
+            <br>
+            <input type="submit">
+        </form>
+
+        <br>
+        <hr>
+
+
+        <h1>HTML <u style="font-style: italic;">option</u> Tag</h1>
+        <h3>HTML Option Tag</h3>
+        <select>
+            <!-- option tag starts -->
+            <option>Choose an option</option>
+            <option value="html">HTML</option>
+            <option value="java">JAVA</option>
+            <option value="C++">C++</option>
+            <option value="php">PHP</option>
+            <option value="perl">PERL</option>
+            <!-- option tag ends -->
+        </select>
+
+        <br>   
+        <hr>
+
+    
+        <h1>HTML <u style="font-style: italic;">optgroup</u> Tag</h1>
+
+        <h3>HTML Optgroup Tag</h3>
+        <select>
+            <optgroup label="Preogramming language">
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </optgroup>
+            <optgroup label="scripting language">
+                <option value="Javascript">Javascript</option>
+                <option value="PHP">PHP</option>
+                <option value="Shell">Shell</option>
+            </optgroup>
+        </select>
+
+    </body>
+</html>

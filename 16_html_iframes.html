@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>HTML Iframes</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>HTML iframe tag</h1>
+
+        <!-- Basic inframe example without any style or attributes applying -->
+        <iframe src="https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html" ></iframe>
+        <br>
+        <br>
+
+
+        <!-- using height and width attributes to iframe tag -->
+        <iframe src="https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html" width="400" height="500"></iframe>
+        <br>
+        <br>
+
+
+        <!-- removing borders from iframe -->
+        <iframe src="https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html" style="border: none;" width="400" height="500"></iframe>
+        <br>
+        <br>
+
+
+        <!-- styling inframe border using css -->
+        <iframe src="https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html" width="400" height="500" style="border: 4px dashed red;"></iframe>
+        <br>
+        <br>
+
+
+        <!-- inframe target in link -->
+        <iframe src="https://media.geeksforgeeks.org/wp-content/uploads/20210910170539/gfg-221x300.png" width="400" height="500" name="iframe_a" ></iframe>
+                   <!-- name="iframe_a" gives the iframe a name, which will be used later -->
+
+        <p>
+            <a href="https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html"  target="iframe_a">converter</a>
+                   <!-- </p>: This line creates a link (using the <a> tag) that says "Converter".
+                    When you click this link, it will open the URL "https://media.geeksforgeeks.org/wp-content/uploads/20240206111438/uni2.html" in the iframe named "iframe_a".
+                    The target="iframe_a" tells the browser to open the link in the iframe-->
+
+        </p>
+        
+
+    </body>
+</html>

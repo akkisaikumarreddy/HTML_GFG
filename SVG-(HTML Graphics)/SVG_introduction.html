@@ -1,0 +1,194 @@
+<html>
+    <head>
+        <title>SVG-HTML Graphics</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>SVG Introduction</h1>
+        <ul>
+            <li>SVG stands for Scalable Vector Graphic is a XML language used to make graphics and animations like in HTML canvas. It is a type of vector graphic that may be scaled up or down. SVG is a web standard for vector-based graphics. It is an XML format that defines graphics.</li> 
+            <li>In SVG files, every element and property can be animated. SVG is compatible with other W3C standards such as the Document Object Model (DOM) and XSL.</li>
+        </ul>
+
+        <br>
+
+        <h3>How SVG Integrates with HTML?</h3>
+        <ul>
+            <li><u>Inline SVG</u> :- Embed SVG directly within HTML using the &lt;svg&gt; element.</li>
+            <li><u>External SVG</u> :- Link to an external SVG file using the &lt;object&gt; or &gt;img&lt; element.</li>
+            <li><u>Inline SVG with &lt;use&gt;</u> :- Reuse SVG elements within HTML using the &lt;use&gt; element.</li>
+            <li><u>JavaScript Manipulation</u> :- Dynamically create or modify SVG elements using JavaScript.</li>
+        </ul>
+
+        <br>
+        <hr>
+
+        <h2><u>SVG Basic Examples :-</u></h2>
+
+        <h3>using   Inline SVG element drawing a <u>Circle</u></h3>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="red" />
+        </svg>
+        
+        <ul>
+            <li><u>cx="50"</u>: Sets the x-coordinate of the circle's center to 50 units.</li>
+            <li><u>cy="50"</u>: Sets the y-coordinate of the circle's center to 50 units.</li>
+            <li><u>r="40"</u>: Sets the radius of the circle to 40 units.</li>
+            <li><u>fill="red"</u>: Sets the fill color of the circle to red.</li>
+        </ul>
+
+        <p>If Circle measurements  exceeds SVG width and height then it won't form full circle this is an example</p>
+
+        <svg width="100" height="100">
+                <circle cx="90" cy="90" r="70" fill="blue" stroke-width="5" />
+        </svg>
+
+        <br>    
+
+        <svg width="200" height="200">
+            <circle cx="90" cy="90" r="70" fill="aqua" stroke-width="5" />
+        </svg>
+
+        <br>
+        <hr>
+  
+        <h3>using Inline SVG element drawing a <u>Line</u></h3>
+ 
+        <svg width="600" height="250">
+            <line x1="10" y1="10" x2="450" y2="450" style="stroke: rgb(165, 42, 42); stroke-width: 5;" />
+        </svg>
+
+
+        <ul>
+            <li><u>x1="10"</u>: Sets the x-coordinate of the line's starting point to 10 units.</li>
+            <li><u>y1="10"</u>: Sets the y-coordinate of the line's starting point to 10 units.</li>
+            <li><u>x2="450"</u>: Sets the x-coordinate of the line's ending point to 450 units.</li>
+            <li><u>y2="450"</u>: Sets the y-coordinate of the line's ending point to 450 units.</li>
+            <li><u>stroke:brown</u>: Sets the stroke (color) of the line to brown</li>
+            <li><u>stroke-width:5</u>: Sets the width of the line to 5 units.</li>
+        </ul>
+
+
+        <svg width="600" height="250">
+            <line x1="100" y1="130" x2="550" y2="500" style="stroke: brown; stroke-width: 4;" />
+        </svg>
+
+        <br>
+        <hr>
+    
+        <h3>using Inline SVG element drawing a <u>Rectangle</u></h3>
+        <svg width=    "400" height="100">
+            <rect width="400" height="100" style="fill: chocolate; stroke-width: 10; stroke: darkgreen;"/>
+        </svg>
+
+
+        <br>   
+        <hr>
+                 
+        <h3>using Inline SVG element drawing a <u>Rounded Rectangle</u></h3>
+         
+        <svg width="350" height="350">
+            <rect x="80" y="20" rx="20" ry="20" width="220" height="150" style="fill: chartreuse; stroke-width: 5; stroke: black;" />
+        </svg>
+        <ul>
+            <li><u>x="80"</u>: Sets the x-coordinate of the rectangle's upper-left corner to 80 units.</li>
+            <li><u>y="20"</u>: Sets the y-coordinate of the rectangle's upper-left corner to 20 units.</li>
+            <li><u>rx="20" and ry="20"</u>: These attributes define    the radius of the rectangle's corners, giving it rounded corners with a radius of 20 units.</li>
+            <li><u>width="210"</u>: Sets the width of the rectangle to 210 units.</li>   
+            <li><u>height="150"</u>: Sets the height of the rectangle to 150 units.</li>
+        </ul> 
+
+        <br>
+        <hr>
+           
+
+        <h3>using Inline SVG element drawing a <u>Star</u></h3>
+        <svg width="300" height="300">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"  style="fill: darkturquoise; stroke-width: 5;stroke: chocolate; fill-rule: evenodd;" />
+        </svg>
+        <br>  
+        <svg width="300" height="300">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"  style="fill: darkturquoise; stroke-width: 5;stroke: chocolate; fill-rule:nonzero" />
+        </svg>         
+ 
+        
+        <ul>
+            <li><u>points="100,10 40,198 190,78 10,78 160,198"</u>: Specifies the coordinates of the vertices of the polygon. These points create a star-like shape.</li>
+            <li><u>fill-rule: evenodd</u>: Specifies the rule used to determine the inside of the shape. The evenodd rule alternates between filling and not filling areas, based on the number of polygon edges crossed.</li>
+        </ul>
+ 
+        <br>
+        <hr>
+
+
+        <h3>using Inline SVG element drawing a <u>Logo</u></h3>
+        <svg height="350" width="700">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:white; stop-opacity: 1" />
+                    <stop offset="100%" style="stop-color: green; stop-opacity: 1" />       
+                </linearGradient>
+            </defs>
+            <ellipse cx="200" cy="100" rx="120" ry="80" fill="url(#grad1)" />
+            <text fill="#ffffff" font-size="22" font-family="ARIAL" x="120" y="110">GeeksforGeeks</text>
+        </svg>
+
+
+        <ul>
+            <li><u></u>&lt;defs&gt;</u>:This tag is used to define reusable elements within the SVG. Any elements inside &lt;defs&gt; can be referenced elsewhere in the SVG.</li>
+            <li>
+                linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"
+                <ul>
+                    <li>This defines a linear gradient with the ID grad1</li>
+                    <li><u>x1="0%" y1="0%"</u>: Sets the starting point of the gradient at the top-left corner.</li>
+                    <li><u>x2="100%" y2="0%"</u>: Sets the ending point of the gradient at the top-right corner.</li>
+                </ul>
+            </li>
+
+            <li>stop offset="0%" style="stop-color:white; stop-opacity: 1
+                <ul>     
+
+                    <li>This defines the first color stop in the gradient</li>
+                    <li><u>offset="0%"</u>: The stop is placed at the starting point of the gradient.</li>
+                    <li><u>style="stop-color:white; stop-opacity: 1"</u>: The color at this stop is white with full opacity.</li>
+                </ul>
+            </li>
+
+            <li>stop offset="100%" style="stop-color: green; stop-opacity: 1                
+                <ul>
+                    <li>This defines the second color stop in the gradient</li>
+                    <li><u>offset="100%"</u>: The stop is placed at the ending point of the gradient.</li>
+                    <li><u>style="stop-color: green; stop-opacity: 1"</u>: The color at this stop is green with full opacity.</li>
+                </ul>
+            </li>
+
+            <li>
+                ellipse cx="200" cy="100" rx="120" ry="80" fill="url(#grad1)"
+                <ul>      
+                    <li>This defines an ellipse (oval shape) inside the SVG container</li> 
+                    <li><u>cx="200"</u>: Sets the x-coordinate of the center of the ellipse to 200 units.</li>
+                    <li><u>cy="100"</u>: Sets the y-coordinate of the center of the ellipse to 100 units.</li>
+                    <li><u>rx="120"</u>: Sets the horizontal radius of the ellipse to 120 units.</li>
+                    <li><u>ry="80"</u>: Sets the vertical radius of the ellipse to 80 units.</li>
+                    <li><u>fill="url(#grad1)"</u>: Fills the ellipse with the linear gradient defined by grad1</li>
+                </ul>
+            </li>
+
+            <li>
+                text fill="#ffffff" font-size="22" font-family="ARIAL" x="120" y="110"
+                <ul>  
+                    <li>This defines a text element inside the SVG container.</li>
+                    <li>fill="#ffffff": Sets the fill color of the text to white.</li>
+                    <li>font-size="22": Sets the font size of the text to 22 units.</li>
+                    <li>font-family="ARIAL": Sets the font family of the text to Arial.</li>
+                    <li>x="120": Sets the x-coordinate of the starting point of the text to 120 units.</li>
+                    <li>y="110": Sets the y-coordinate of the starting point of the text to 110 units.</li>
+                </ul>
+            </li>
+            
+
+        </ul>
+    </body> 
+</html>
+  

@@ -1,0 +1,221 @@
+<html>
+    <head>
+        <title>HTML Lists</title>
+    </head>
+    <body>
+        <!--Basic Example of HTML Lists-->
+        <h1 style="color: green;font-size: 30px; text-align: center;">Welcome to GeeksforGeeks</h1>
+        <h4>Lists of available courses</h4>
+        <ul>
+            <li>Data structure & Algorithms</li>
+            <li>Web Technology</li>
+            <li>Aptitude & Logical Reasoning</li>
+            <li>Programming Languages</li>
+        </ul>
+        <h4>Data Structures topics</h4>
+        <ol>
+            <li>Array</li>
+            <li>Linked List</li>
+            <li>Stacks</li>
+            <li>Queues</li>
+            <li>Trees</li>
+            <li>Graphs</li>
+        </ol>
+
+        <br>
+        <hr>
+
+
+        <h1>HTML Unordered List or Bulleted List</h1>
+        <!--The unordered list items are marked with bullets, also known as bulleted lists.
+        An unordered list starts with the <ul> tag, and each list item begins with the <li> tag.-->
+        <h3>HTML ul tag</h3>
+
+        <p style="font-size: larger;">basic unordered lists</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+        </ul>
+
+
+        <!-- Implementation of list style type to square in unordered lists -->
+        <p style="font-size: larger;">Square type unordered list</p>
+        <ul style="list-style-type: square;">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+        </ul>
+
+
+        <!-- Implementation of list style type to a circle. -->
+        <p style="font-size: larger;">Circle type unordered list</p>
+        <ul style="list-style-type: circle;">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+        </ul>
+
+
+        <!-- Implementation of  list style type to none-->
+        <p style="font-size: larger;">None type unordered list</p>
+        <ul style="list-style-type: none;">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>React</li>
+        </ul>
+
+
+
+        <!-- Nested Unordered List-->
+        <p style="font-size: larger;">Nested Unordered List</p>
+        <ul>
+            <li>geeks</li>
+            <li>
+                web development
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </li>
+            <li>Java Script</li>
+        </ul>
+
+        <ul type="square">
+            <li>HTML</li>
+            <li>
+                CSS 
+                <ul>
+                    <li>angular.js</li>
+                    <li>djanjo</li>
+                </ul>
+            </li>
+            <li>javascript</li>
+        </ul>
+
+
+        <!-- Horizontal Unordered List -->
+        
+
+        <br>
+        <hr>
+
+
+        <h1>HTML Ordered List</h1>
+        <!-- In an ordered list, all list items are marked with numbers by default. 
+         An ordered list starts with the <ol> tag, and each list item begins with the <li> tag.-->
+        <h3>Html ol tag</h3>
+
+        <!-- normal use of <ol> tag -->
+        <p style="font-size: larger;">With no attributes</p>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+
+        <!-- reverse use of <ol> tag -->
+        <p style="font-size: larger;">Reversed attribute</p>
+        <ol reversed>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+
+
+        <!-- start with a random number insted of 1 using  <ol> tag -->
+        <p style="font-size: larger;"> Start attribute</p>
+        <ol start="6">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ol>
+
+
+        <!-- insted of numbers use Upper case roman numbers (I=1, II=2, III=3, IV=4) -->
+        <p style="font-size: larger;">Type attribute with upper case roman numbers</p>
+        <ol type="I">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Bootstrap</li>
+        </ol>
+
+
+        <!-- insted of numbers use lower case roman numbers (i=1, ii=2, iii=3, iv=4) -->
+        <p style="font-size: larger;">Type attribute with lower case roman numbers</p>
+        <ol type="i">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Bootstrap</li>
+        </ol>
+
+
+        <!-- insted of numbers use capital alphabets (A,B,C,D....)-->
+        <p style="font-size: larger;">Tye attribute with upper case letters</p>
+        <ol type="A">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Bootstrap</li>
+        </ol>
+
+
+        <!-- insted of numbers use lower case alphabets (a,b,c,d....)-->
+        <p style="font-size: larger;">Tye attribute with lower case letters</p>
+        <ol type="a">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Bootstrap</li>
+        </ol>
+
+
+
+    <!-- Nested Ordered Lists -->
+    <p style="font-size: larger;">Nested Ordered Lists</p>
+    <ol>
+        <li>
+            java script
+            <ol type="i">
+                <li>React</li>
+                <li>Angular</li>
+                <li>Vue.js</li>
+            </ol>
+        </li>
+        <li>
+            python 
+            <ol type="i">
+                <li>Django</li>
+                <li>Flask</li>
+                <li>Pyramid</li>
+            </ol>
+        </li>
+    </ol>
+
+        <br>
+        <hr>
+
+
+        <h1>HTML Description List</h1>
+        <!-- A description list is a list of terms, with a description of each term. Description lists are less common 
+         but very useful for definitions, glossaries, or any other key-value pairs of items-->
+        <!--- The <dl> tag defines the description list, 
+            the <dt> tag defines the term name, and 
+            the <dd> tag describes each term.-->
+        
+        <dl>
+            <dt><u>HTML:-</u></dt>
+            <dd>HTML stands for HyperText Markup Language. It is used to design the front end portion of web pages using markup language</dd>
+            <dt><u>CSS:-</u></dt>
+            <dd>Cascading Style Sheets fondly referred to as CSS is a simply designed language intended to simplify the process of making web pages</dd>
+        </dl>
+
+
+    </body>
+</html>

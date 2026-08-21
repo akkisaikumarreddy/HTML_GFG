@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG Elements</title>
+    <meta charset="utf-8" name="view  port" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        @keyframes animation1 {
+            from { width: 5px; height: 5px; }
+            to { width: 150px; height: 150px; }
+        }
+        rect { 
+            animation: animation1 10s ease-in-out;      
+        }
+    </style>
+</head>
+<body>
+    <h1>SVG <u style="color: brown; font-size: 40px; font-weight: bold;">&lt;clipPath&gt;</u> Element</h1>
+    <h2>
+        <details>
+            <summary><u>Syntax :</u></summary>
+            <p style="padding: 10px; font-size: 20px; font-weight: bold;">&lt;clipPath&gt; ....... &lt;/clipPath&gt;</p>
+            <br>
+            <p>The &lt;clipPath&gt; SVG element is used to define a clipping path that is to be used by the clip-path property. It works the same as clip-path in CSS. The clipPath element is used to put some restriction on a region such that anything drawn outside that region will neither be visible nor be drawn</p>
+        </details>
+    </h2>
+
+    <div style="width: 300px; height: 300px;">
+        <h1 style="color: green;">GeeksforGeeks</h1>
+        <h2>SVG clipPath element</h2>
+
+        <svg width="500" height="500" transform="translate(100, 0)">
+            <clipPath id="gfg">
+                <rect width="100" height="100"></rect>
+            </clipPath>
+            <path id="path" d="M10, 30 A20, 20, 0, 0,
+                             1, 50, 30 A20, 20, 0, 0, 1,
+                             90, 30 Q90, 60, 50, 90 Q10, 
+                             60, 10, 30 Z" />
+            <use fill="green" clip-path="url(#gfg)" href="#path" />
+        </svg>
+    </div>
+
+    <br>
+    <style>
+        @keyframes star{
+            from{r: 0;}
+            to{r: 500px;}
+        } 
+    </style>
+</body>
+</html>
+  
